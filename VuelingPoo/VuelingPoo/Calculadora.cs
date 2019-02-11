@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net.Config;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace VuelingPoo
 {
-    class Calculadora : ICalculadora , ICloneable
+    public class Calculadora : ICalculadora , ICloneable
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        static void Main()
+        static void Main(string[] args)
         {
 
             log.Info("Trying that works log!");
-
+            Console.Read();
         }
 
         public int Division(int num1, int num2)
@@ -25,7 +26,7 @@ namespace VuelingPoo
             }
             catch (DivideByZeroException e)
             {
-                log.Info("Dividiendo entre 0! ", e);
+                log.Error("Division entre 0 ", e);
                 Console.WriteLine(e.Message);
 
                 throw;
