@@ -18,8 +18,8 @@ namespace VuelingPoo.Behaviour.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("CalculadoraFeature", Description="\tI want to calculate some features.\r\n\tCalculate the sum of two numbers\r\n\tCalculat" +
-        "e the reduction of two numbers\r\n\tCalculate the division of two numbers.\r\n\tCalcul" +
-        "ate the multiplication of two numbers", SourceFile="CalculadoraFeature.feature", SourceLine=0)]
+        "e the reduct of two numbers\r\n\tCalculate the division of two numbers.\r\n\tCalculate" +
+        " the multiplication of two numbers", SourceFile="CalculadoraFeature.feature", SourceLine=0)]
     public partial class CalculadoraFeatureFeature
     {
         
@@ -33,8 +33,8 @@ namespace VuelingPoo.Behaviour.Tests
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CalculadoraFeature", "\tI want to calculate some features.\r\n\tCalculate the sum of two numbers\r\n\tCalculat" +
-                    "e the reduction of two numbers\r\n\tCalculate the division of two numbers.\r\n\tCalcul" +
-                    "ate the multiplication of two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "e the reduct of two numbers\r\n\tCalculate the division of two numbers.\r\n\tCalculate" +
+                    " the multiplication of two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,85 +70,77 @@ namespace VuelingPoo.Behaviour.Tests
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "mytag"}, SourceLine=8)]
+        [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", SourceLine=7)]
         public virtual void AddTwoNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, new string[] {
-                        "mytag"});
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, ((string[])(null)));
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 10
+#line 9
  testRunner.Given("I have entered 5 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
+#line 10
  testRunner.And("I have entered 7 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.When("I press Suma Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.When("I press Suma method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
  testRunner.Then("the result should be 12 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Reduct two numbers", new string[] {
-                "mytag"}, SourceLine=15)]
+        [TechTalk.SpecRun.ScenarioAttribute("Reduct two numbers", SourceLine=13)]
         public virtual void ReductTwoNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reduct two numbers", null, new string[] {
-                        "mytag"});
-#line 16
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reduct two numbers", null, ((string[])(null)));
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 17
+#line 15
  testRunner.Given("I have entered 10 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
+#line 16
  testRunner.And("I have entered 5 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 17
+ testRunner.When("I press Reduct Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
  testRunner.Then("the result should be 5 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers", new string[] {
-                "mytag"}, SourceLine=22)]
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers", SourceLine=20)]
         public virtual void DivideTwoNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, new string[] {
-                        "mytag"});
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, ((string[])(null)));
+#line 21
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 24
+#line 22
  testRunner.Given("I have entered 10 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
+#line 23
  testRunner.And("I have entered 2 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 24
+ testRunner.When("I press Divide Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
  testRunner.Then("the result should be 5 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Multiplicate two numbers", new string[] {
-                "mytag"}, SourceLine=29)]
+        [TechTalk.SpecRun.ScenarioAttribute("Multiplicate two numbers", SourceLine=26)]
         public virtual void MultiplicateTwoNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiplicate two numbers", null, new string[] {
-                        "mytag"});
-#line 30
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiplicate two numbers", null, ((string[])(null)));
+#line 27
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 31
+#line 28
  testRunner.Given("I have entered 5 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 32
+#line 29
  testRunner.And("I have entered 2 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 30
+ testRunner.When("I press Multiplication button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
  testRunner.Then("the result should be 10 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
