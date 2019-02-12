@@ -19,7 +19,7 @@ namespace VuelingPoo
             log.Info("Trying that works log!");
             ICalculadora calculadora = new Calculadora();
             calculadora.Division(9,0);
-            Console.Read();
+            //Console.Read();
         }
 
         public int Division(int num1, int num2)
@@ -31,7 +31,7 @@ namespace VuelingPoo
             catch (DivideByZeroException e)
             {
                 log.Warn("Division entre 0 ", e);
-                Console.ReadLine();
+                //Console.ReadLine();
 
                 throw;
             }

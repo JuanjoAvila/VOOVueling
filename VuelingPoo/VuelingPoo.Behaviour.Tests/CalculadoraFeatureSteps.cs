@@ -8,99 +8,46 @@ namespace VuelingPoo.Behaviour.Tests
     public class CalculadoraFeatureSteps
     {
         private int result;
-        private readonly ICalculadora calculator = new Calculadora();
+        private readonly ICalculadora calculadora = new Calculadora();
+
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculatorSum(int number)
+        public void GivenIHaveEnteredIntoTheCalculator(int number)
         {
-            calculator.FirstNumber = number;
+            calculadora.FirstNumber = number;
         }
 
         [Given(@"I have also entered (.*) into the calculator")]
-        public void GivenIHaveAlsoEnteredIntoTheCalculatorSum(int number)
+        public void GivenIHaveAlsoEnteredIntoTheCalculator(int number)
         {
-            calculator.SecondNumber = number;
+            calculadora.SecondNumber = number;
         }
 
-        [When(@"I press Suma Method")]
-        public void WhenIPressSumaMethod()
+        [When(@"I press Suma Button")]
+        public void WhenIPressSumaButton()
         {
-            result = calculator.Suma(calculator.FirstNumber,calculator.SecondNumber);
+            result = calculadora.Suma(calculadora.FirstNumber, calculadora.SecondNumber);
+        }
+
+        [When(@"I press Reduct Button")]
+        public void WhenIPressReductButton()
+        {
+            result = calculadora.Resta(calculadora.FirstNumber, calculadora.SecondNumber);
         }
         
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreenSum(int expectedResult)
+        [When(@"I press Divide Button")]
+        public void WhenIPressDivideButton()
         {
-            Assert.AreEqual(expectedResult, result);
+            result = calculadora.Division(calculadora.FirstNumber, calculadora.SecondNumber);
         }
-
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculatorReduct(int number)
+        
+        [When(@"I press Multiplication Button")]
+        public void WhenIPressMultiplicationButton()
         {
-            calculator.FirstNumber = number;
-        }
-
-        [Given(@"I have also entered (.*) into the calculator")]
-        public void GivenIHaveAlsoEnteredIntoTheCalculatorReduct(int number)
-        {
-            calculator.SecondNumber = number;
-        }
-
-        [When(@"I press Suma Method")]
-        public void WhenIPressRestaMethod()
-        {
-            result = calculator.Resta(calculator.FirstNumber, calculator.SecondNumber);
+            result = calculadora.Multiplicacion(calculadora.FirstNumber, calculadora.SecondNumber);
         }
 
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreenReducted(int expectedResult)
-        {
-            Assert.AreEqual(expectedResult, result);
-        }
-
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculatorDivision(int number)
-        {
-            calculator.FirstNumber = number;
-        }
-
-        [Given(@"I have also entered (.*) into the calculator")]
-        public void GivenIHaveAlsoEnteredIntoTheCalculatorDivision(int number)
-        {
-            calculator.SecondNumber = number;
-        }
-
-        [When(@"I press Suma Method")]
-        public void WhenIPressDivisionMethod()
-        {
-            result = calculator.Division(calculator.FirstNumber, calculator.SecondNumber);
-        }
-
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreenDivsion(int expectedResult)
-        {
-            Assert.AreEqual(expectedResult, result);
-        }
-
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculatorMultiplicate(int number)
-        {
-            calculator.FirstNumber = number;
-        }
-
-        [Given(@"I have also entered (.*) into the calculator")]
-        public void GivenIHaveAlsoEnteredIntoTheCalculatorMultiplicate(int number)
-        {
-            calculator.SecondNumber = number;
-        }
-
-        [When(@"I press Suma Method")]
-        public void WhenIPressMultiplicacionMethod()
-        {
-            result = calculator.Multiplicacion(calculator.FirstNumber, calculator.SecondNumber);
-        }
-
-        [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreenMultiplication(int expectedResult)
+        public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
             Assert.AreEqual(expectedResult, result);
         }
