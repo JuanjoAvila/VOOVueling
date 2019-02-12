@@ -15,6 +15,8 @@ namespace VuelingPoo
         {
 
             log.Info("Trying that works log!");
+            ICalculadora calculadora = new Calculadora();
+            calculadora.Division(9,0);
             Console.Read();
         }
 
@@ -26,8 +28,8 @@ namespace VuelingPoo
             }
             catch (DivideByZeroException e)
             {
-                log.Error("Division entre 0 ", e);
-                Console.WriteLine(e.Message);
+                log.Warn("Division entre 0 ", e);
+                Console.ReadLine();
 
                 throw;
             }
