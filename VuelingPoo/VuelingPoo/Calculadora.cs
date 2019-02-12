@@ -11,9 +11,11 @@ namespace VuelingPoo
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        public int FirstNumber { get ; set ; }
+        public int SecondNumber { get; set ; }
+
         static void Main(string[] args)
         {
-
             log.Info("Trying that works log!");
             ICalculadora calculadora = new Calculadora();
             calculadora.Division(9,0);

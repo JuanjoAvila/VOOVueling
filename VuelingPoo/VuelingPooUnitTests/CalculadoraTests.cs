@@ -40,7 +40,6 @@ namespace VuelingPoo.Tests
         {
 
             var result = mockObject.Division(4, 0);
-            //Assert.AreEqual(new DivideByZeroException(), result);
         }
 
         [TestMethod()]
